@@ -1,0 +1,84 @@
+{
+  "_comment": "Tradable symbols with pip values and spread limits",
+
+  "EURUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.0001,
+    "max_spread_pips": 3.0,
+    "min_volume": 0.01,
+    "max_volume": 5.0,
+    "volume_step": 0.01,
+    "digits": 5,
+    "category": "forex_major",
+    "strategies_allowed": ["S01", "S02", "S03", "S06"]
+  },
+  "GBPUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.0001,
+    "max_spread_pips": 4.0,
+    "min_volume": 0.01,
+    "max_volume": 5.0,
+    "volume_step": 0.01,
+    "digits": 5,
+    "category": "forex_major",
+    "strategies_allowed": ["S01", "S02", "S03", "S06"]
+  },
+  "USDJPY": {
+    "pip_value_per_lot": 6.5,
+    "pip_size": 0.01,
+    "max_spread_pips": 3.0,
+    "min_volume": 0.01,
+    "max_volume": 5.0,
+    "volume_step": 0.01,
+    "digits": 3,
+    "category": "forex_major",
+    "strategies_allowed": ["S01", "S02", "S06"],
+    "_note": "JPY pairs: SL pips * 100, not * 10000"
+  },
+  "XAUUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.1,
+    "max_spread_pips": 5.0,
+    "min_volume": 0.01,
+    "max_volume": 3.0,
+    "volume_step": 0.01,
+    "digits": 2,
+    "category": "commodity",
+    "strategies_allowed": ["S04", "S06"],
+    "_note": "Gold: 1 pip = $1 per 0.01 lot. SL in points * 0.1"
+  },
+  "NZDUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.0001,
+    "max_spread_pips": 4.0,
+    "min_volume": 0.01,
+    "max_volume": 5.0,
+    "volume_step": 0.01,
+    "digits": 5,
+    "category": "forex_minor",
+    "strategies_allowed": ["S05", "S06"]
+  },
+  "AUDUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.0001,
+    "max_spread_pips": 4.0,
+    "min_volume": 0.01,
+    "max_volume": 5.0,
+    "volume_step": 0.01,
+    "digits": 5,
+    "category": "forex_minor",
+    "strategies_allowed": ["S05", "S06"]
+  },
+  "USOUSD": {
+    "pip_value_per_lot": 10.0,
+    "pip_size": 0.01,
+    "max_spread_pips": 8.0,
+    "min_volume": 0.01,
+    "max_volume": 3.0,
+    "volume_step": 0.01,
+    "digits": 2,
+    "category": "commodity",
+    "strategies_allowed": ["S05", "S06"],
+    "_note": "US Crude Oil (WTI)"
+  }
+}

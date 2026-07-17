@@ -1,0 +1,1 @@
+"""TradeGOD — Core Package"""

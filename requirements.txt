@@ -1,0 +1,40 @@
+# TradeGOD Quant Fund — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# MetaTrader 5 integration
+MetaTrader5>=5.0.45
+
+# ZeroMQ bridge (Python <-> MQL5)
+pyzmq>=25.1.0
+
+# Data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# HTTP requests (ForexFactory news API)
+requests>=2.31.0
+
+# Telegram bot notifications
+python-telegram-bot>=20.6
+
+# Dashboard (local web UI)
+streamlit>=1.28.0
+plotly>=5.18.0
+
+# Database
+# (SQLite is built-in to Python, no install needed)
+
+# Scheduling
+schedule>=1.2.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Logging
+colorlog>=6.7.0
+
+# Testing
+pytest>=7.4.0
+
+# Data download utilities
+httpx>=0.25.0

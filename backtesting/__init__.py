@@ -1,0 +1,1 @@
+"""TradeGOD — Backtesting Package"""

@@ -1,0 +1,68 @@
+{
+  "_comment": "Funding Pips 5K Account — Hardcoded Compliance Parameters",
+  "_last_updated": "2026-07-15",
+
+  "account": {
+    "starting_capital": 5000.0,
+    "currency": "USD",
+    "magic_number": 777999
+  },
+
+  "risk_per_trade": {
+    "percent": 1.0,
+    "max_dollar_amount": 50.0,
+    "_note": "1% of $5000 = $50 hard cap per trade. NEVER exceed this."
+  },
+
+  "daily_limits": {
+    "kill_switch_percent": 4.5,
+    "kill_switch_dollar": 225.0,
+    "hard_limit_percent": 5.0,
+    "hard_limit_dollar": 250.0,
+    "_note": "Kill-switch fires at -$225 (4.5%), leaving 0.5% buffer before Funding Pips hard 5% limit"
+  },
+
+  "max_drawdown": {
+    "kill_switch_percent": 9.0,
+    "kill_switch_dollar": 450.0,
+    "hard_limit_percent": 10.0,
+    "hard_limit_dollar": 500.0
+  },
+
+  "position_rules": {
+    "max_positions_per_symbol": 1,
+    "max_total_open_positions": 3,
+    "min_hold_time_seconds": 180,
+    "max_slippage_pips": 3,
+    "directional_cooldown_seconds": 600,
+    "_note": "10-min cooldown after SL hit, same symbol+direction"
+  },
+
+  "consistency_rules": {
+    "single_trade_max_profit_pct_of_phase_target": 60.0,
+    "daily_max_profit_pct_of_phase_target": 35.0,
+    "_note": "Phase 1 target = 8% of 5K = $400. Max single trade profit = $240. Max daily = $140"
+  },
+
+  "evaluation_targets": {
+    "phase1_profit_target_pct": 8.0,
+    "phase1_profit_target_dollar": 400.0,
+    "phase2_profit_target_pct": 5.0,
+    "phase2_profit_target_dollar": 250.0,
+    "min_trading_days_phase1": 3
+  },
+
+  "weekend_rules": {
+    "close_all_friday_utc_hour": 21,
+    "close_all_friday_utc_minute": 0,
+    "_note": "All positions closed by Friday 21:00 UTC (Friday ~2:30 AM IST)"
+  },
+
+  "activity_keepalive": {
+    "enabled": true,
+    "trigger_after_idle_days": 8,
+    "lot_size": 0.01,
+    "hold_time_seconds": 185,
+    "_note": "Prevents account dormancy. Opens 0.01 lot, holds 185s (>180s compliance), closes. Fully within Funding Pips rules."
+  }
+}

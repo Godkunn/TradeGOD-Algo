@@ -1,0 +1,82 @@
+{
+  "_comment": "TradeGOD Strategy Parameters — Tune these without touching code",
+
+  "volatility_squeeze": {
+    "bb_period": 20,
+    "bb_multiplier": 2.0,
+    "kc_period": 20,
+    "kc_atr_multiplier": 1.5,
+    "momentum_rsi_period": 14,
+    "momentum_macd_fast": 12,
+    "momentum_macd_slow": 26,
+    "momentum_macd_signal": 9,
+    "timeframe_htf": "H1",
+    "timeframe_ltf": "M15",
+    "min_squeeze_bars": 3
+  },
+
+  "smc_ob_fvg": {
+    "structure_timeframe": "M15",
+    "entry_timeframe": "M1",
+    "fractal_lookback": 5,
+    "fvg_min_gap_pips": 2.0,
+    "ob_body_ratio_min": 0.50,
+    "erc_body_ratio_min": 0.80,
+    "base_max_candles": 6,
+    "base_max_range_pips": 15.0,
+    "explosion_atr_multiplier": 2.0,
+    "discount_premium_threshold": 0.50,
+    "sl_atr_buffer_multiplier": 2.5,
+    "rr_min": 1.5,
+    "rr_target": 2.0,
+    "partial_close_at_rr": 1.5,
+    "partial_close_percent": 50.0,
+    "ob_scoring_min_score": 8
+  },
+
+  "liquidity_sweep": {
+    "lookback_bars": 50,
+    "sweep_tolerance_pips": 3.0,
+    "fakeout_confirm_candles": 2,
+    "target_rr": 2.0,
+    "session": "NY"
+  },
+
+  "gold_scalper": {
+    "zone_lookback_bars": 20,
+    "zone_touch_tolerance_pips": 5.0,
+    "direct_touch_rr": 1.0,
+    "fallback_rr": 1.5,
+    "sessions_allowed": ["ASIAN", "NY"],
+    "sessions_blocked": ["LONDON"],
+    "atr_period": 14
+  },
+
+  "rem_liquidity": {
+    "h4_body_min_ratio": 0.50,
+    "fvg_scan_timeframe": "M15",
+    "entry_timeframe": "M5",
+    "sl_buffer_pips": 5.0,
+    "rr_target": 2.0,
+    "allowed_days": ["TUESDAY", "WEDNESDAY", "THURSDAY"],
+    "blocked_days": ["MONDAY", "FRIDAY"]
+  },
+
+  "asymmetric_risk": {
+    "defensive_risk_pct": 0.5,
+    "aggressive_risk_pct": 1.5,
+    "defensive_rr": 1.0,
+    "aggressive_rr": 1.5,
+    "profit_distribution_trades": 2,
+    "_note": "Switch to defensive when balance < starting_capital, aggressive when > starting_capital"
+  },
+
+  "global_filters": {
+    "anti_fomo_atr_multiplier": 3.0,
+    "volume_ma_period": 10,
+    "volume_confirmation_multiplier": 1.0,
+    "max_trades_per_day": 2,
+    "ema_200_trend_filter": true,
+    "heikin_ashi_exit": true
+  }
+}

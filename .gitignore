@@ -1,0 +1,35 @@
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database and State
+*.db
+*.sqlite3
+database/trade_logs.db
+database/system_state.json
+
+# Backtesting Data Output
+backtesting/data/*.csv
+backtesting/data/*.png
+backtesting/data/*.pdf
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+.env.example
+
+# Logs
+logs/
+*.log
